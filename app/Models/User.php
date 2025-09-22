@@ -31,6 +31,10 @@ class User extends Model
         return $this->belongsTo(Business::class);
     }
 
+    
+    public function Appointment() {
+        return $this->hasMany(Business::class);
+    }
 
     
     protected $allowIncluded = ['services','business'];
